@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS todos CASCADE;
+
+CREATE TABLE todos (
+  id SERIAL PRIMARY KEY NOT NULL,
+  text VARCHAR(255) NOT NULL,
+  is_completed boolean DEFAULT FALSE,
+  uuid_id VARCHAR(225) NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT Now()
+);
